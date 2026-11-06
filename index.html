@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>فقط کتاب | فروشگاه کتاب</title>
+  <meta name="description" content="فروشگاه اینترنتی فقط کتاب؛ خرید و دانلود کتاب‌های فارسی و انگلیسی">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#">فقط<span>کتاب</span></a>
+    <nav>
+      <a href="#books">کتاب‌ها</a>
+      <a href="#categories">دسته‌بندی‌ها</a>
+      <a href="#offers">پیشنهاد ویژه</a>
+      <a href="#about">درباره ما</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="جستجو" onclick="focusSearch()">⌕</button>
+      <button class="cart" onclick="showCart()">سبد خرید <b id="cartCount">0</b></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">کتاب، برای هر سلیقه‌ای</span>
+      <h1>کتاب بعدی‌ات<br><span>همین‌جاست.</span></h1>
+      <p>مجموعه‌ای منتخب از کتاب‌های فارسی و انگلیسی؛ برای یادگیری، رشد و لذت از مطالعه.</p>
+      <div class="hero-buttons">
+        <a class="btn primary" href="#books">مشاهده کتاب‌ها</a>
+        <a class="btn ghost" href="#categories">دسته‌بندی‌ها</a>
+      </div>
+      <div class="stats">
+        <div><strong>+۲۵۰۰</strong><small>عنوان کتاب</small></div>
+        <div><strong>+۱۲۰۰</strong><small>خواننده</small></div>
+        <div><strong>۲۴/۷</strong><small>دسترسی آنلاین</small></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="book book-one"><span>Data<br>Architecture</span></div>
+      <div class="book book-two"><span>Python<br>for Engineers</span></div>
+      <div class="book book-three"><span>SwiftUI<br>Cookbook</span></div>
+      <div class="floating">پیشنهاد<br><b>امروز</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="search-section">
+  <div class="container">
+    <div class="search-box">
+      <span>⌕</span>
+      <input id="searchInput" type="search" placeholder="نام کتاب، نویسنده یا موضوع را جستجو کنید..." oninput="filterBooks()">
+      <button onclick="filterBooks()">جستجو</button>
+    </div>
+  </div>
+</section>
+
+<section id="categories" class="section">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="kicker">انتخاب با شما</span><h2>دسته‌بندی‌ها</h2></div>
+    </div>
+    <div class="categories">
+      <a href="#books" onclick="setCategory('programming')">💻 <span>برنامه‌نویسی</span></a>
+      <a href="#books" onclick="setCategory('business')">📈 <span>کسب‌وکار</span></a>
+      <a href="#books" onclick="setCategory('design')">🎨 <span>طراحی</span></a>
+      <a href="#books" onclick="setCategory('science')">🔬 <span>علم و مهندسی</span></a>
+      <a href="#books" onclick="setCategory('fiction')">📚 <span>داستان و رمان</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="books" class="section books-section">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="kicker">محبوب‌ترین‌ها</span><h2>کتاب‌های منتخب</h2></div>
+      <a href="#" onclick="resetFilters(); return false;">مشاهده همه ←</a>
+    </div>
+    <div id="bookGrid" class="book-grid"></div>
+    <p id="emptyState" class="empty" hidden>کتابی با این مشخصات پیدا نشد.</p>
+  </div>
+</section>
+
+<section id="offers" class="offer">
+  <div class="container offer-inner">
+    <div>
+      <span class="kicker">پیشنهاد ویژه</span>
+      <h2>برای شروع یادگیری آماده‌ای؟</h2>
+      <p>هر هفته مجموعه‌ای از کتاب‌های منتخب را با تخفیف ویژه پیدا کن.</p>
+    </div>
+    <a class="btn light" href="#books">مشاهده پیشنهادها</a>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <div class="container about-grid">
+    <div>
+      <span class="kicker">فقط کتاب</span>
+      <h2>یک جای ساده برای پیدا کردن کتاب‌های خوب</h2>
+    </div>
+    <p>فقط کتاب با هدف دسترسی آسان‌تر به کتاب‌های آموزشی، تخصصی و عمومی طراحی شده است. این قالب نمونه برای GitHub Pages آماده شده و می‌توانی محصولات، قیمت‌ها، تصاویر و لینک خرید را به‌راحتی تغییر بدهی.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><a class="logo" href="#">فقط<span>کتاب</span></a><p>کتاب‌های خوب، انتخاب‌های بهتر.</p></div>
+    <div><h3>دسترسی سریع</h3><a href="#books">کتاب‌ها</a><a href="#categories">دسته‌بندی‌ها</a><a href="#about">درباره ما</a></div>
+    <div><h3>ارتباط با ما</h3><a href="mailto:info@faghatketab.ir">info@faghatketab.ir</a><span>تهران، ایران</span></div>
+  </div>
+  <div class="copyright">© 2026 فقط کتاب — تمامی حقوق محفوظ است.</div>
+</footer>
+
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

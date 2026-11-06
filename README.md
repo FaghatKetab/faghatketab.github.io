@@ -1,16 +1,13 @@
-## Hi there 👋
+# فقط کتاب — GitHub Pages
 
-<!--
-**FaghatKetab/faghatketab** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+قالب فروشگاه کتاب فارسی و راست‌چین.
 
-Here are some ideas to get you started:
+## انتشار در GitHub Pages
+1. فایل‌های `index.html`، `style.css` و `script.js` را در ریشه Repository آپلود کنید.
+2. در Settings → Pages، Source را روی `Deploy from a branch` بگذارید.
+3. Branch را روی `main` و Folder را روی `/ (root)` قرار دهید.
+4. Save را بزنید.
+5. در بخش Custom domain، دامنه خود را وارد کنید.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## شخصی‌سازی
+کتاب‌ها در فایل `script.js` داخل آرایه `books` قرار دارند. عنوان، نویسنده، قیمت، دسته‌بندی و ظاهر کارت‌ها را می‌توانید تغییر دهید.
