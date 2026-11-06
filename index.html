@@ -1,123 +1,72 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>فقط کتاب | فروشگاه کتاب</title>
-  <meta name="description" content="فروشگاه اینترنتی فقط کتاب؛ خرید و دانلود کتاب‌های فارسی و انگلیسی">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>فقط کتاب | معرفی و بررسی کتاب‌های فارسی و انگلیسی</title>
+<meta name="description" content="معرفی، بررسی و اطلاعات کتاب‌های فارسی و انگلیسی در فقط کتاب.">
+<link rel="canonical" href="https://faghatketab.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="فقط کتاب | معرفی و بررسی کتاب‌ها">
+<meta property="og:description" content="معرفی و بررسی کتاب‌های فارسی و انگلیسی.">
+<meta property="og:url" content="https://faghatketab.github.io/">
+<link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <a class="logo" href="#">فقط<span>کتاب</span></a>
-    <nav>
-      <a href="#books">کتاب‌ها</a>
-      <a href="#categories">دسته‌بندی‌ها</a>
-      <a href="#offers">پیشنهاد ویژه</a>
-      <a href="#about">درباره ما</a>
-    </nav>
-    <div class="nav-actions">
-      <button class="icon-btn" aria-label="جستجو" onclick="focusSearch()">⌕</button>
-      <button class="cart" onclick="showCart()">سبد خرید <b id="cartCount">0</b></button>
-    </div>
-  </div>
+<header class="site-header">
+<div class="container nav">
+<a class="brand" href="/">فقط<span>کتاب</span></a>
+<nav><a href="/">خانه</a><a href="#books">کتاب‌ها</a><a href="#about">درباره</a></nav>
+</div>
 </header>
 
 <main>
 <section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <span class="eyebrow">کتاب، برای هر سلیقه‌ای</span>
-      <h1>کتاب بعدی‌ات<br><span>همین‌جاست.</span></h1>
-      <p>مجموعه‌ای منتخب از کتاب‌های فارسی و انگلیسی؛ برای یادگیری، رشد و لذت از مطالعه.</p>
-      <div class="hero-buttons">
-        <a class="btn primary" href="#books">مشاهده کتاب‌ها</a>
-        <a class="btn ghost" href="#categories">دسته‌بندی‌ها</a>
-      </div>
-      <div class="stats">
-        <div><strong>+۲۵۰۰</strong><small>عنوان کتاب</small></div>
-        <div><strong>+۱۲۰۰</strong><small>خواننده</small></div>
-        <div><strong>۲۴/۷</strong><small>دسترسی آنلاین</small></div>
-      </div>
-    </div>
-    <div class="hero-art">
-      <div class="book book-one"><span>Data<br>Architecture</span></div>
-      <div class="book book-two"><span>Python<br>for Engineers</span></div>
-      <div class="book book-three"><span>SwiftUI<br>Cookbook</span></div>
-      <div class="floating">پیشنهاد<br><b>امروز</b></div>
-    </div>
-  </div>
+<div class="container">
+<span class="eyebrow">کتاب‌های خوب، انتخاب‌های بهتر</span>
+<h1>کتاب موردنظرت را<br><span>پیدا کن.</span></h1>
+<p>معرفی و بررسی کتاب‌های آموزشی، تخصصی و کاربردی؛ با اطلاعاتی که قبل از خرید به آن نیاز داری.</p>
+<div class="search"><span>⌕</span><input id="search" type="search" placeholder="نام کتاب یا موضوع را جستجو کنید..." oninput="filterBooks()"></div>
+</div>
 </section>
 
-<section class="search-section">
-  <div class="container">
-    <div class="search-box">
-      <span>⌕</span>
-      <input id="searchInput" type="search" placeholder="نام کتاب، نویسنده یا موضوع را جستجو کنید..." oninput="filterBooks()">
-      <button onclick="filterBooks()">جستجو</button>
-    </div>
-  </div>
+<section id="books" class="section">
+<div class="container">
+<div class="section-title"><div><small>منتخب کتاب‌ها</small><h2>آخرین کتاب‌ها</h2></div></div>
+<div id="grid" class="grid">
+<a class="card" data-search="python engineers scientists برنامه نویسی مهندسی" href="/books/python-for-engineers/">
+<div class="cover cover-python">Python<br>for Engineers<br>& Scientists</div>
+<div class="card-body"><h3>Python for Engineers and Scientists</h3><p>معرفی کتاب، مشخصات و کاربردهای آن</p><span>مشاهده کتاب ←</span></div>
+</a>
+<a class="card" data-search="swiftui cookbook ios swift اپل" href="/books/swiftui-cookbook/">
+<div class="cover cover-swift">SwiftUI<br>Cookbook</div>
+<div class="card-body"><h3>SwiftUI Cookbook</h3><p>معرفی کتاب و راهنمای محتوای آن</p><span>مشاهده کتاب ←</span></div>
+</a>
+</div>
+<p id="empty" class="empty" hidden>کتابی با این عبارت پیدا نشد.</p>
+</div>
 </section>
 
-<section id="categories" class="section">
-  <div class="container">
-    <div class="section-head">
-      <div><span class="kicker">انتخاب با شما</span><h2>دسته‌بندی‌ها</h2></div>
-    </div>
-    <div class="categories">
-      <a href="#books" onclick="setCategory('programming')">💻 <span>برنامه‌نویسی</span></a>
-      <a href="#books" onclick="setCategory('business')">📈 <span>کسب‌وکار</span></a>
-      <a href="#books" onclick="setCategory('design')">🎨 <span>طراحی</span></a>
-      <a href="#books" onclick="setCategory('science')">🔬 <span>علم و مهندسی</span></a>
-      <a href="#books" onclick="setCategory('fiction')">📚 <span>داستان و رمان</span></a>
-    </div>
-  </div>
-</section>
-
-<section id="books" class="section books-section">
-  <div class="container">
-    <div class="section-head">
-      <div><span class="kicker">محبوب‌ترین‌ها</span><h2>کتاب‌های منتخب</h2></div>
-      <a href="#" onclick="resetFilters(); return false;">مشاهده همه ←</a>
-    </div>
-    <div id="bookGrid" class="book-grid"></div>
-    <p id="emptyState" class="empty" hidden>کتابی با این مشخصات پیدا نشد.</p>
-  </div>
-</section>
-
-<section id="offers" class="offer">
-  <div class="container offer-inner">
-    <div>
-      <span class="kicker">پیشنهاد ویژه</span>
-      <h2>برای شروع یادگیری آماده‌ای؟</h2>
-      <p>هر هفته مجموعه‌ای از کتاب‌های منتخب را با تخفیف ویژه پیدا کن.</p>
-    </div>
-    <a class="btn light" href="#books">مشاهده پیشنهادها</a>
-  </div>
-</section>
-
-<section id="about" class="section about">
-  <div class="container about-grid">
-    <div>
-      <span class="kicker">فقط کتاب</span>
-      <h2>یک جای ساده برای پیدا کردن کتاب‌های خوب</h2>
-    </div>
-    <p>فقط کتاب با هدف دسترسی آسان‌تر به کتاب‌های آموزشی، تخصصی و عمومی طراحی شده است. این قالب نمونه برای GitHub Pages آماده شده و می‌توانی محصولات، قیمت‌ها، تصاویر و لینک خرید را به‌راحتی تغییر بدهی.</p>
-  </div>
+<section id="about" class="about">
+<div class="container">
+<small>درباره فقط کتاب</small>
+<h2>یک مرجع ساده برای پیدا کردن کتاب‌های مفید</h2>
+<p>در فقط کتاب، اطلاعات کتاب‌های منتخب را به شکلی ساده و کاربردی ارائه می‌کنیم تا قبل از خرید، شناخت بهتری از محتوا و کاربرد کتاب داشته باشید.</p>
+</div>
 </section>
 </main>
 
-<footer>
-  <div class="container footer-grid">
-    <div><a class="logo" href="#">فقط<span>کتاب</span></a><p>کتاب‌های خوب، انتخاب‌های بهتر.</p></div>
-    <div><h3>دسترسی سریع</h3><a href="#books">کتاب‌ها</a><a href="#categories">دسته‌بندی‌ها</a><a href="#about">درباره ما</a></div>
-    <div><h3>ارتباط با ما</h3><a href="mailto:info@faghatketab.ir">info@faghatketab.ir</a><span>تهران، ایران</span></div>
-  </div>
-  <div class="copyright">© 2026 فقط کتاب — تمامی حقوق محفوظ است.</div>
-</footer>
-
-<div id="toast" class="toast"></div>
-<script src="script.js"></script>
+<footer><div class="container footer"><a class="brand" href="/">فقط<span>کتاب</span></a><p>© 2026 فقط کتاب</p></div></footer>
+<script>
+function filterBooks(){
+ const q=document.getElementById('search').value.trim().toLowerCase();
+ let visible=0;
+ document.querySelectorAll('.card').forEach(c=>{
+   const ok=c.dataset.search.includes(q);
+   c.hidden=!ok; if(ok) visible++;
+ });
+ document.getElementById('empty').hidden=visible!==0;
+}
+</script>
 </body>
 </html>
